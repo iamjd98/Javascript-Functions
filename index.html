@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>JS Activity</title>
+</head>
+<body>
+
+<div class=" mx-auto container row">
+
+    <div class="container-fluid mx-auto col-12 mt-5 d-flex justify-content-center align-items-center">
+        <h1 class="text-danger">User Information</h1>
+    </div>
+
+    <div class="container-fluid mx-auto col-6 mt-5">
+        
+            Full Name: <br>
+            <input type="text" id="name">
+            <br>
+            Age: <br>
+            <input class="" type="number" id="age">
+            <br>
+            Email: <br>
+            <input class="" type="email" id="email">
+            <br>
+            Gender: <br>
+            <Select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Rather Not Say">Rather Not Say</option> 
+            </Select>
+            <br>
+            Nickname Name: <br>
+            <input type="text" id="nickname">
+            <br>
+            <br>
+            <button class="btn-success p-2 rounded" onclick="form_submit()">Submit</button>
+            
+       
+
+    </div>
+
+    <div class="container-fluid mx-auto col-6 mt-5">
+    
+        <h5 class="text-primary">Full Name: <span id="username"></span></h5>
+        <br>
+        <h5 class="text-primary">Age: <span id="userage"></span></h5>
+        <br>
+        <h5 class="text-primary">Email: <span id="useremail"></span></h5>
+        <br>
+        <h5 class="text-primary">Gender: <span id="usergender"></span></h5>
+        <br>
+        <h5 class="text-primary">Nickname: <span id="usernickname"></span></h5>
+
+    </div>
+
+    <hr class="mt-5">
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        <h1>Simple Calculator</h1>
+    </div>
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        <div>
+        <input type="number" id="cal_first_num" value>
+        <br>
+        <br>
+        <select name="operation" id="cal_operation">
+            <option value="multiply">multiply</option>
+            <option value="divide">divide</option>
+            <option value="add">add</option>
+            <option value="subtract">subtract</option>
+        </select>
+        <br>
+        <br>
+        <input type="number" id="cal_sec_num" value>
+        <br>
+        <br>
+        <button class="btn-success pe-3 ps-3" id="cal_btn" onclick="cal_solve()">Get Answer</button>
+        <button class="btn-danger pe-3 ps-3" id="cal_btn" onclick="cal_clear()">clear</button>
+        <br>
+        <br>
+        <p>The Answer is: <span id="cal_answer"></span></p>
+        </div>
+    </div>
+
+    <hr class="mt-5">
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        <div>
+        <input type="text" id="todo_input" value>
+        <button class="btn-info" onclick="add_todo()" id="todobtn">Add To-do</button>
+        <br>
+        <br>
+        <h5>👇 To-Do List 👇</h5>
+        <br>
+        <br>
+        <ul id="todo_list">
+        </ul>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        <h1 class="text-danger">Simple Todo List</h1>
+
+    </div>
+
+    <hr class="mt-5">
+
+    <div class="container-fluid mx-auto col-12 mt-5 d-flex justify-content-center align-items-center">
+        <div>
+        <center><h1 class="text-danger">The Flex Bus</h1></center>
+        
+        <center><h5>Drive the School Bus to School using Bootstrap-Flexbox</h5></center>
+        </div>
+    </div>
+
+    <div id="bus" class="default">
+        <img src="bus.png" alt="bus" style="height: 200px;">
+    </div>
+
+    
+    <div class="container-fluid mx-auto col-12 mt-5 d-flex justify-content-between align-items-center">
+        <h4>Home</h4>
+        <h4>School</h4>
+    </div>
+
+    <div class="container-fluid mx-auto col-12 d-flex justify-content-center align-items-center" style="margin-bottom: 30px;">
+        <input value type="text" name="code" id="code-input" style="width: 500px; margin-right: 20px;">
+        <button class="btn-primary p-1" onclick="changeclass()">Run Code</button>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+       <h1 class="text-danger">Set Time-out</h1>
+    </div>
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        
+        <div>
+            <button onclick="setTimeout(timeout, 5000)" class="btn-success rounded mb-3">Click Me For Goodnews</button>
+            <br>
+            <p id="appear">wait 5 Seconds for the good news to appear.</p>
+            <h3 class="text-danger " id="goodnews"></h3>
+
+        </div>
+
+     </div>
+
+    <hr class="mt-5">
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        <div>
+            <center><h1 id="upperlowertext">a b c d e f g h i j k l m n o p q r s t u v w x y z</h1></center>
+            <center><button class="btn-primary m-1" onclick="uppercase()">To UpperCase</button></center>
+            <center><button class="btn-primary m-1 mt-1" onclick="lowercase()">To LowerCase</button></center>   
+        </div> 
+    </div>
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        
+        <h1 class="text-danger">UpperCase & Lowercase</h1>
+    </div>    
+
+    <hr class="mt-5">
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        
+        <h1 class="text-danger">Window History API</h1>
+
+    </div> 
+
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+    <div>
+    <button class="btn-info rounded p-2" onclick="showhistory()">Show History Count</button>
+    <h5>Your Current Window History is: <span id="history"></span></h5>
+    </div>
+    </div>
+
+     <hr class="mt-5">
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        
+        <div>
+        <button onclick="getlocation()" class="btn-success rounded m-2">Get your current location</button>
+        <p id="currentloc"></p>
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid mx-auto col-6 mt-5 d-flex justify-content-center align-items-center">
+        
+        <h1 class="text-danger">Geolocation API</h1>
+
+    </div> 
+    
+         <hr class="mt-5">     
+
+
+
+    
+   
+
+
+
+
+
+
+
+
+</div>
+ 
+    
+
+<script src="myscript.js"></script>
+</body>
+</html>

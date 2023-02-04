@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.default {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.busphotocon {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
